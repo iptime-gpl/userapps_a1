@@ -1,0 +1,101 @@
+---> CONFIG_EFM_PATCH
+#drivers/net/rtl819x/RTL8370_RTL8367_API/rtk_api.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_cfg.h://#ifndef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_cfg.h:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_cfg.h:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_tx.c:#ifndef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_tx.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_sme.c:#ifndef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_sme.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_sme.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/ieee802_mib.h:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_osdep.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_osdep.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_osdep.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_osdep.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd_hw.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/wireless/rtl8192cd/8192cd.h:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/char/rtl_gpio.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/char/rtl_gpio.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/mtd/maps/rtl819x_flash.c:#ifdef CONFIG_EFM_PATCH
+patched--->include/net/rtl/rtl_types.h:#ifdef CONFIG_EFM_PATCH
+patched-->include/net/rtl/rtl865x_netif.h:#ifdef CONFIG_EFM_PATCH
+patched-->include/net/rtl/rtl865x_netif.h:#ifdef CONFIG_EFM_PATCH
+patched--->init/main.c:#ifdef CONFIG_EFM_PATCH
+patched--->init/main.c:#ifdef CONFIG_EFM_PATCH
+patched--->net/bridge/br_input.c:#ifdef CONFIG_EFM_PATCH
+patched--->net/bridge/br_input.c:#ifdef CONFIG_EFM_PATCH
+patched--->net/ipv4/netfilter/nf_nat_core.c:#ifdef CONFIG_EFM_PATCH
+patched--->net/ipv4/arp.c:#ifdef CONFIG_EFM_PATCH
+patched-->net/rtl/features/rtl_features.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl865x_proc_debug.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl865x_proc_debug.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl865x_proc_debug.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl865x_proc_debug.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH
+patched--->drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH
+patched--->include/net/rtl/rtl_nic.h:#ifdef CONFIG_EFM_PATCH
+patched--->include/net/rtl/rtl_nic.h:#ifdef CONFIG_EFM_PATCH
+
+/* Not applied yet : Jumbo Frame Patch */
+drivers/net/rtl819x/AsicDriver/rtl865x_asicL2.c:#ifdef CONFIG_EFM_PATCH_XXX
+drivers/net/rtl819x/AsicDriver/rtl865x_asicL2.c:#ifdef CONFIG_EFM_PATCH
+drivers/net/rtl819x/AsicDriver/rtl865x_asicL2.c:#ifdef CONFIG_EFM_PATCH
+/* Not applied yet : Jumbo Frame Patch End */
+
+
+/* Not applied start */
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c:#ifndef  CONFIG_EFM_PATCH
+/* Not applied end */
+
+
+include/net/netfilter/nf_conntrack_helper.h:#ifdef CONFIG_EFM_PATCH_XXX
+net/netfilter/nf_conntrack_core.c:#ifdef CONFIG_EFM_PATCH_XXX
+net/netfilter/nf_conntrack_core.c:#ifdef CONFIG_EFM_PATCH_XXX
+net/netfilter/nf_conntrack_helper.c:#ifdef CONFIG_EFM_PATCH_XXX
+
+drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH_XXX
+drivers/net/rtl819x/rtl_nic.c:#ifdef CONFIG_EFM_PATCH_XXX
+
+
+---> CONFIG_SKIP_NETFILTER_HOOK_FOR_MULTICAST => No need
+patched---> CONFIG_EMBEDDED_TCP_MSS_PMTU_PATCH
+patched---> CONFIG_PASSTHROUGH_ALL_CHAIN
+	patched---> CONFIG_DRIVERLEVEL_REAL_IPCLONE
+patched---> CONFIG_IP_CONNTRACK_LIMIT_CONTROL
+patched---> CONFIG_IP_CONNTRACK_LIMIT_PER_IP
+
+patched---> CONFIG_NF_CONNTRACK_BNET
+patched---> CONFIG_CONNTRACK_STATISTICS
+patched---> CONFIG_NETFILTER_XT_TARGET_NETDETECT
+patched---> CONFIG_NETFILTER_XT_TARGET_HAIRPIN
+patched---> CONFIG_FORWARD_SPEED_UP_PATCH
+
+patched---> CONFIG_NF_NAT_BNET
+	patched---> CONFIG_PORT_BASED_VLAN_FEATURE
+patched---> CONFIG_EFM_PATCH should be added in nf_conntrack_ftp.c 
+
+patched--->CONFIG_NF_CONNTRACK_H323=y
+patched--->CONFIG_NF_CONNTRACK_TFTP=y
+patched--->CONFIG_NETFILTER_XT_MATCH_MULTIPORT=y
+patched--->CONFIG_NETFILTER_XT_MATCH_STRING=y
+patched--->CONFIG_IP_NF_QUEUE=y
+patched--->CONFIG_IP_NF_TARGET_REJECT=y
+patched--->CONFIG_NF_NAT_TFTP=y
+patched--->CONFIG_NF_NAT_H323=y
+patched--->CONFIG_NET_CLS_BASIC=y
+patched--->CONFIG_RTL_DFS_SUPPORT=y
+patched--->CONFIG_RTL_PROC_DEBUG=y
+
+---> CONFIG_NETFILTER_XT_MATCH_IPPOOL -> No need
+---> CONFIG_NF_NAT_ISPFAKE -> No need

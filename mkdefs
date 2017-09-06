@@ -1,0 +1,28 @@
+#CROSS = /toolchain/rsdk-96c/mips-uclibc-
+#CROSS = /home/rtlac/RTL3.4/rtl819x/toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/bin/rsdk-linux-
+CROSS = /home/$(shell whoami)/RTL3.4/rtl819x/toolchain/rsdk-1.5.10-5281-EB-2.6.30-0.9.30-m32ub-130429/bin/rsdk-linux-
+CC = $(CROSS)gcc
+LD = $(CROSS)gcc
+AR = $(CROSS)ar
+RANLIB = $(CROSS)ranlib
+NM = $(CROSS)nm
+OBJCOPY = $(CROSS)objcopy
+OBJDUMP = $(CROSS)objdump
+STRIPTOOL = $(CROSS)strip
+STRIP    = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
+UPNP_TARGET = /toolchain/rsdk-96c/mipsel-linux-uclibc
+
+IPTABLES_PATH:=$(USERAPPS_ROOT)/iptables-1.4.4
+#IPROUTE_PATH:=iproute2-2.6.29-1
+
+-include $(USERAPPS_ROOT)/config
+include $(USERAPPS_ROOT)/cflags.mk
+
+KERNEL_PATH := $(USERAPPS_ROOT)/linux
+USERLAND_LIB := -L$(USERAPPS_ROOT)/lib/ul_lib -luserland -lcrypt
+# CGI_LIB := -L$(USERAPPS_ROOT)/lib/ul_lib -L$(USERAPPS_ROOT)/lib -L$(USERAPPS_ROOT)/rtl_app/install/lib -lcgi -luserland -lm -lcrypt -lrtl 
+CGI_LIB := -L$(USERAPPS_ROOT)/lib/ul_lib -L$(USERAPPS_ROOT)/lib -L$(USERAPPS_ROOT)/rtl_app/install/lib -lcgi -luserland -lcrypt -lrtl 
+
+ifeq ($(USE_ROUTER_NAS),y)
+CGI_LIB += -L$(USERAPPS_ROOT)/nasapp/efmsrc/lib -lnas -L$(USERAPPS_ROOT)/nasapp/lib -liconv
+endif

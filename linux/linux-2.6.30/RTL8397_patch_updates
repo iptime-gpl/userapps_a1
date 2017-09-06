@@ -1,0 +1,13 @@
+U drivers/net/rtl819x/Kconfig
+U drivers/net/rtl819x/rtl865xc_swNic.h
+U drivers/net/rtl819x/AsicDriver/rtl865x_asicCom.h
+U drivers/net/rtl819x/AsicDriver/rtl865x_asicL2.c
+U drivers/net/rtl819x/AsicDriver/rtl865x_asicL2.h
+U drivers/net/rtl819x/AsicDriver/rtl865xc_asicregs.h
+U drivers/net/rtl819x/common/smi.c
+U drivers/net/rtl819x/igmpsnooping/rtl865x_igmpsnooping_new.c
+U drivers/net/rtl819x/l2Driver/rtl865x_fdb.c
+U drivers/net/rtl819x/rtl8367r/rtk_api.c
+U drivers/net/rtl819x/rtl865x/Makefile
+U net/bridge/br_fdb.c
+U net/bridge/br_input.c

@@ -1,0 +1,7 @@
+
+# $Id: Config.in,v 1.1.1.1 2013/12/04 05:11:14 rtlac Exp $
+
+mainmenu_option next_comment
+comment 'PCM Controller @ Realtek'
+tristate 'PCM Controller @ Realtek support' CONFIG_PCM
+endmenu

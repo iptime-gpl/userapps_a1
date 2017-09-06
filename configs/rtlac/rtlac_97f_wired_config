@@ -1,0 +1,71 @@
+PROJECT_ID := rtlac
+# BOOTLOADER_DIR := 
+USE_LOCAL_BUSYBOX:=y
+BUSYBOX_DIR:=busybox-1.13
+IPTABLES_DIR:=iptables-1.4.10
+USE_RTL3_TREE:=y
+
+#REAL_KERNEL_PATH:=../rtl819x-sdk-v2.4/rtl819x/linux-2.6.30
+
+include $(USERAPPS_ROOT)/configs/rtlac/menu_wired_router_efm
+include $(USERAPPS_ROOT)/configs/rtlac/common_config
+include $(USERAPPS_ROOT)/configs/rtlac/apps_config
+-include $(USERAPPS_ROOT)/lang_config
+
+USE_BIG_ENDIAN:=n
+
+CPU_ID:=rtl8197f
+
+IF_WAN:=\"eth1\"
+IF_LAN:=\"eth0\"
+IF_LAN_PHY:=\"eth0\"
+IF_LOCAL:=\"br0\"
+
+#USE_GIGA_SWITCH:=y
+MINIUPNPD_DIR:=miniupnpd-1.6
+USE_QOS:=y
+
+# dummy
+IF_WAN2:=\"eth3\"
+
+ifeq ($(KOREAN_SUPPORT),y)
+USE_ISPFAKE:=y
+endif
+
+RTL_SDK_VERSION:=R3.4.11b
+
+USE_KERNEL_3_X:=y
+USE_UI2:=y
+USE_BRIDGE:=y
+
+USE_IGMP_CONFIG_REBOOT:=y
+
+-include $(USERAPPS_ROOT)/misc_config
+
+ifeq ($(KOREAN_SUPPORT),)
+USE_PLANTYNET:=n
+endif
+USE_NEW_MAC_SCHEME:=y
+USE_NO_WIRED_IGMP_SNOOPING:=n
+
+ifeq ($(USE_CONCURRENT_BAND),y)
+IF_WIRELESS_5G:=\"wlan0\"
+IF_WIRELESS:=\"wlan1\"
+else
+IF_WIRELESS:=\"wlan0\"
+endif
+
+
+ifeq ($(USE_MULTI_BRIDGE_SUPPORT),y)
+
+ifeq ($(USE_CONCURRENT_BAND),y)
+IF_WWAN:=\"wlan1-vxd\"
+IF_WWAN_5G:=\"wlan0-vxd\"
+else
+IF_WWAN:=\"wlan0-vxd\"
+endif
+endif
+
+USE_WIRELESS_TOOLS:=n
+IF_WIRELESS_DEFAULT:=\"wlan0\"
+

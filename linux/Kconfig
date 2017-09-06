@@ -1,0 +1,114 @@
+mainmenu "RLX Linux Configuration"
+
+comment  "select components"
+choice
+  prompt "Selected Target"
+config BOARD_CVS
+	bool "CVS"
+config BOARD_rtl8196c
+	bool "rtl8196c"
+config BOARD_rtl8196e
+	bool "rtl8196e"
+config BOARD_rtl8196eu
+	bool "rtl8196eu"
+config BOARD_rtl8198
+	bool "rtl8198"
+config BOARD_rtl819xD
+	bool "rtl819xD"
+config BOARD_rtl8881a
+	bool "rtl8881a"
+config BOARD_rtl89xxC
+	bool "rtl89xxC"
+config BOARD_rtl89xxD
+	bool "rtl89xxD"
+endchoice
+
+config BOARDDIR
+ string
+
+##############################################################
+
+
+choice
+	prompt "Selected Kernel"
+	default LINUX_2.6.30
+
+config LINUX_2.6.30
+	bool "linux-2.6.30"
+
+endchoice
+
+config LINUXDIR
+	string
+
+choice
+  prompt "Selected Busybox"
+config BZBOX_busybox-1.13
+	bool "busybox-1.13"
+endchoice
+
+config BZBOXDIR
+ string
+
+if BOARD_rtl8196e||BOARD_rtl8196eu
+choice
+  prompt "Selected toolchain"
+config RSDK_rsdk-1.5.5-4181-EB-2.6.30-0.9.30.3-110225
+	bool "rsdk-1.5.5-4181-EB-2.6.30-0.9.30.3-110225"
+config RSDK_rsdk-4.4.7-4181-EB-2.6.30-0.9.30-m32u-140129
+	bool "rsdk-4.4.7-4181-EB-2.6.30-0.9.30-m32u-140129"
+endchoice
+endif
+if  !BOARD_rtl8196e && !BOARD_rtl8196eu 
+choice
+  prompt "Selected toolchain"
+config RSDK_rsdk-1.5.10-5281-EB-2.6.30-0.9.30-m32ub-130429
+	bool "rsdk-1.5.10-5281-EB-2.6.30-0.9.30-m32ub-130429"
+config RSDK_rsdk-4.4.7-4181-EB-2.6.30-0.9.30-m32u-140129
+	bool "rsdk-4.4.7-4181-EB-2.6.30-0.9.30-m32u-140129"
+endchoice
+endif
+
+config RSDKDIR
+ string
+
+if BOARD_rtl8196c
+	source "boards/rtl8196c/board-configuration.in"
+endif
+if BOARD_rtl8196e
+	source "boards/rtl8196e/board-configuration.in"
+endif
+if BOARD_rtl8196eu
+	source "boards/rtl8196eu/board-configuration.in"
+endif
+if BOARD_rtl8198
+	source "boards/rtl8198/board-configuration.in"
+endif
+if BOARD_rtl819xD
+	source "boards/rtl819xD/board-configuration.in"
+endif
+if BOARD_rtl8881a
+	source "boards/rtl8881a/board-configuration.in"
+endif
+if BOARD_rtl89xxC
+	source "boards/rtl89xxC/board-configuration.in"
+endif
+if BOARD_rtl89xxD
+	source "boards/rtl89xxD/board-configuration.in"
+endif
+##############################################################
+
+comment  "config components"
+config MCONF_LINUX
+	bool "Config kernel"
+
+config MCONF_USERS
+	bool "Config users"
+config MCONF_BZBOX
+	bool "Config busybox"
+config MCONF_LOAD
+	bool "Load default settings"
+
+config MCONF_SAVE
+	bool "Save default settings"
+

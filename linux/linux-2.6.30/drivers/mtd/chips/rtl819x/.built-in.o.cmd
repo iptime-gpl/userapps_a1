@@ -1,0 +1,1 @@
+cmd_drivers/mtd/chips/rtl819x/built-in.o :=  rsdk-linux-ld  -m elf32btsmip   -r -o drivers/mtd/chips/rtl819x/built-in.o drivers/mtd/chips/rtl819x/spi_probe.o drivers/mtd/chips/rtl819x/spi_cmd.o drivers/mtd/chips/rtl819x/spi_common.o drivers/mtd/chips/rtl819x/spi_flash.o 

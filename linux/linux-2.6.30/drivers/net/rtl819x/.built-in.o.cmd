@@ -1,0 +1,1 @@
+cmd_drivers/net/rtl819x/built-in.o :=  rsdk-linux-ld  -m elf32btsmip   -r -o drivers/net/rtl819x/built-in.o drivers/net/rtl819x/rtl865xc_swNic.o drivers/net/rtl819x/rtl_nic.o drivers/net/rtl819x/rtl865x_proc_debug.o drivers/net/rtl819x/rtl865x/built-in.o 

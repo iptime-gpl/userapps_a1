@@ -1,0 +1,26 @@
+Title 	Second commit
+Who	scchoi
+Date 	2017.08.03
+Files	
+	M arch/rlx/Kconfig
+	M drivers/char/Makefile
+	M drivers/char/rtl_gpio.c
+	M drivers/char/rtl_gpio_extender_u1.c
+	M drivers/mtd/chips/rtl819x/spi_common.c
+	M drivers/net/rtl819x/rtl865x_proc_debug.c
+	M drivers/net/rtl819x/rtl_nic.c
+	M drivers/net/wireless/Makefile
+	M drivers/net/wireless/rtl8192cd/8192cd_sme.c
+	M include/net/netfilter/nf_conntrack.h
+	M net/netfilter/Kconfig
+	M net/netfilter/nf_conntrack_core.c
+	M net/netfilter/nf_conntrack_proto_udp.c
+	M net/rtl/features/rtl_features.c
+	M rtkload/Makefile
+
+Changes
+	Support Extender U1/N2
+	Support EON 8MB flash
+	CONFIG_RTL_HW_NAT_BYPASS_PKT
+	
+
