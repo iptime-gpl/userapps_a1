@@ -16,9 +16,20 @@ USE_BIG_ENDIAN:=n
 
 CPU_ID:=rtl8197f
 
-IF_WAN:=\"eth1\"
-IF_LAN:=\"eth0\"
+#IF_WAN:=\"eth1\"
+#IF_LAN:=\"eth0\"
+#IF_LAN_PHY:=\"eth0\"
+#IF_LOCAL:=\"br0\"
+
+IF_WAN:=\"br1\"
+IF_WAN_PHY:=\"eth1\"
+
+IF_BR_WAN:=\"eth0.2\"
+IF_BR_WAN_VIDX:=\"2\"
+
+IF_LAN:=\"eth0.1\"
 IF_LAN_PHY:=\"eth0\"
+IF_LAN_VIDX:=\"1\"
 IF_LOCAL:=\"br0\"
 
 #USE_GIGA_SWITCH:=y

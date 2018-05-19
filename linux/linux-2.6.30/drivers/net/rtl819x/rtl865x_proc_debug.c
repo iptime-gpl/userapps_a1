@@ -4816,7 +4816,12 @@ static int32 port_status_write( struct file *filp, const char *buff,unsigned lon
 				}
 			}
 
+#ifdef CONFIG_RTL8367R_VB_API
+			/* 5 is used for extenal port4*/	
+			for(port = 0; port < 5; port++)
+#else
 			for(port = 0; port < CPU; port++)
+#endif
 			{
 				if((1<<port) & port_mask)
 				{

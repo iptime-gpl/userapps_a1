@@ -172,8 +172,8 @@ BOOT_OUT_IMG:=clones/$(TARGET)/xboot.bin
 
 KERNEL:= $(KERNEL_FILENAME)
 
-FIRMWARE_NAME:=a1_ml_10_008
-PRE_FIRMWARE_NAME:=a1_kr_10_008
+FIRMWARE_NAME:=a1_ml_10_022
+PRE_FIRMWARE_NAME:=a1_kr_10_022
 
 ifeq ($(MAX_BOOT_SIZE),)
 MAX_BOOT_SIZE:=10000
@@ -202,6 +202,14 @@ ifneq ($(FIRMWARE_PRODUCT_ID),)
 else
 	@./makefirm -a $(PRODUCT_ID) -z 0 -l $(LANGUAGE_POSTFIX) -k prebuilt/kernel/$(KERNEL) -c $(ROOTFS_IMG) -f $(MAX_SIZE) -b clones/$(TARGET)/xboot.bin.tmp  -s $(START_FIRM_OFFSET) -v $(MAJOR_VER)_$(MINOR_VER) -p 2 -j $(RANDOM_PROTECT_IV) -n
 endif
+
+
+ifeq ($(STRICT_REGULATION),none)
+ifeq ($(FIRMWARE_AUTOUP_WORKAROUND),y)
+	./autoup_wa $(PRE_FIRMWARE_NAME).bin $(FIRMWARE_AUTOUP_SAVE_OFFSET) $(START_FIRM_OFFSET) $(RANDOM_PROTECT_IV)
+endif
+endif
+
 	@rm -rf tmp.bin
 	@./firmware_size_check.sh $(PRE_FIRMWARE_NAME).bin $(MAX_SIZE)
 	@echo "-------------------------------------------------------------------------"

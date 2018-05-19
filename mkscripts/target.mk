@@ -454,6 +454,7 @@ TARGET_LIST+=strip post_targetfs
 
 target.fs: $(TARGET_LIST)
 	@echo "--->Making target.fs - $(TARGET)"
+#	@sync; sync; sync;
 ifneq ($(LDCONFIG_CMD),)
 	@$(LDCONFIG_CMD)
 endif

@@ -1,6 +1,6 @@
 /* This is a generated file, don't edit */
 
-#define NUM_APPLETS 62
+#define NUM_APPLETS 63
 
 const char applet_names[] ALIGN1 = ""
 "addgroup" "\0"
@@ -56,6 +56,7 @@ const char applet_names[] ALIGN1 = ""
 "syslogd" "\0"
 "tail" "\0"
 "tar" "\0"
+"telnetd" "\0"
 "top" "\0"
 "true" "\0"
 "umount" "\0"
@@ -121,6 +122,7 @@ sync_main,
 syslogd_main,
 tail_main,
 tar_main,
+telnetd_main,
 top_main,
 true_main,
 umount_main,
@@ -186,13 +188,14 @@ const uint16_t applet_nameofs[] ALIGN2 = {
 0x0130,
 0x0135,
 0x0139,
-0x313d,
-0x0142,
-0x0149,
-0x0150,
+0x0141,
+0x3145,
+0x014a,
+0x0151,
 0x0158,
-0x015b,
-0x015e,
+0x0160,
 0x0163,
+0x0166,
+0x016b,
 };
 #define MAX_APPLET_NAME_LEN 8

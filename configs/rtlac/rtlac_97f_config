@@ -26,6 +26,8 @@ MINIUPNPD_DIR:=miniupnpd-1.6
 WIRELESS_TOOLS_DIR:=wireless_tools.rtl.3411b
 USE_QOS:=y
 
+IF_USB:=\"usb0\"
+
 # dummy
 IF_WAN2:=\"eth3\"
 

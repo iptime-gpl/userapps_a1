@@ -22,5 +22,31 @@ Changes
 	Support Extender U1/N2
 	Support EON 8MB flash
 	CONFIG_RTL_HW_NAT_BYPASS_PKT
+--------------------------------------------------------------------------
+Title 	patch for T3008 port4 issue
+Who	scchoi
+Date 	2017.09.05
+Files	
+	drivers/net/rtl819x/rtl865x_proc_debug.c
+Changes
+	Solve issue:If port 4 is configured by manually, port 1/2/3/4 will be dead.
+--------------------------------------------------------------------------
+Title 	KRACK Patch - WPA2 security patch
+Who	scchoi
+Date 	2017.10.24
+Files	
+	M drivers/net/wireless/rtl8192cd/8192cd.h
+	M drivers/net/wireless/rtl8192cd/8192cd_proc.c
+	M drivers/net/wireless/rtl8192cd/8192cd_psk.c
+	M drivers/net/wireless/rtl8192cd/8192cd_psk.h
+	M drivers/net/wireless/rtl8192cd/8192cd_rx.c
+	M drivers/net/wireless/rtl8192cd/8192cd_security.c
+	M drivers/net/wireless/rtl8192cd/8192cd_util.c
+
+Changes
+	KRACK Patch from realtek
+--------------------------------------------------------------------------
+
+
 	
 

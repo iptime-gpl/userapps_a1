@@ -1,7 +1,7 @@
 
 SYSPARMS_MINUS_OFFSET:=0x400
 USE_NEW_TREE:=y
-CGI_ID :=navi-iptime
+#CGI_ID :=navi-iptime
 USE_NEW_LIB:=y
 USE_ICV_CHECK:=n
 LIB_SIZE := full
